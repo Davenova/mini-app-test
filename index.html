@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelDogs Mini App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .pixel-art {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .balance {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .page-container {
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+        }
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(100%);
+            overflow-y: auto;
+        }
+        .page.active {
+            transform: translateX(0);
+        }
+        .page.previous {
+            transform: translateX(-100%);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .stat {
+            flex: 1;
+            text-align: center;
+        }
+        .mining {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .nav-item:hover, .nav-item.active {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="pixel-art">
+                ▄▄▄<br>
+                █▀█<br>
+                █▄█
+            </div>
+            <div class="balance">1027 $PixelDogs</div>
+        </div>
+        
+        <div class="page-container">
+            <div id="home-page" class="page active">
+                <div class="stats">
+                    <div class="stat">
+                        <div>Rewards</div>
+                        <div>+560 🦴</div>
+                    </div>
+                    <div class="stat">
+                        <div>Tasks</div>
+                        <div>+345 🦴</div>
+                    </div>
+                    <div class="stat">
+                        <div>Invites</div>
+                        <div>+112 🦴</div>
+                    </div>
+                </div>
+                <div class="mining" onclick="handleMining()">Mining PixelDogs.. 3hr 21mins</div>
+            </div>
+            
+            <div id="friends-page" class="page">
+                <h2>Friends</h2>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li style="padding: 10px 0;">CryptoBarker - Level 12</li>
+                    <li style="padding: 10px 0;">PixelPup - Level 8</li>
+                    <li style="padding: 10px 0;">BlockchainBowWow - Level 15</li>
+                </ul>
+            </div>
+            
+            <div id="wallet-page" class="page">
+                <h2>Wallet</h2>
+                <p style="margin: 20px 0;">Balance: 1027 $PixelDogs</p>
+                <button onclick="alert('Transaction sent!')">Send $PixelDogs</button>
+                <button onclick="alert('Receiving address copied!')">Receive $PixelDogs</button>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-item active" onclick="navigateTo('home')">🏠<br>Home</div>
+            <div class="nav-item" onclick="navigateTo('friends')">👥<br>Friends</div>
+            <div class="nav-item" onclick="navigateTo('wallet')">💼<br>Wallet</div>
+        </div>
+    </div>
+
+    <script>
+        function handleMining() {
+            alert("Mining in progress! You'll earn PixelDogs over time.");
+        }
+
+        function navigateTo(page) {
+            const currentPage = document.querySelector('.page.active');
+            const newPage = document.getElementById(page + '-page');
+            
+            if (currentPage.id === newPage.id) return;
+
+            const direction = Array.from(document.querySelectorAll('.page')).indexOf(newPage) > 
+                              Array.from(document.querySelectorAll('.page')).indexOf(currentPage) ? 1 : -1;
+
+            currentPage.style.transform = `translateX(0)`;
+            newPage.style.transform = `translateX(${100 * direction}%)`;
+
+            newPage.offsetWidth; // Trigger reflow
+
+            newPage.classList.add('active');
+
+            currentPage.style.transform = `translateX(${-100 * direction}%)`;
+            newPage.style.transform = `translateX(0)`;
+
+            currentPage.addEventListener('transitionend', function handler() {
+                currentPage.classList.remove('active');
+                currentPage.removeEventListener('transitionend', handler);
+            });
+            
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

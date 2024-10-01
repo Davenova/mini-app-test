@@ -1,203 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelDogs Mini App</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body, html {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            height: 100%;
-            overflow: hidden;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            background-color: white;
-        }
-        .header {
-            padding: 20px;
-            text-align: center;
-            background-color: #f8f8f8;
-        }
-        .pixel-art {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .balance {
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .page-container {
-            flex: 1;
-            overflow-y: auto;
-            position: relative;
-        }
-        .page {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            transition: transform 0.5s ease-in-out;
-            transform: translateX(100%);
-            overflow-y: auto;
-        }
-        .page.active {
-            transform: translateX(0);
-        }
-        .page.previous {
-            transform: translateX(-100%);
-        }
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .stat {
-            flex: 1;
-            text-align: center;
-        }
-        .mining {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            background-color: #f8f8f8;
-            padding: 10px;
-        }
-        .nav-item {
-            flex: 1;
-            text-align: center;
-            cursor: pointer;
-            padding: 10px;
-            transition: background-color 0.3s;
-        }
-        .nav-item:hover, .nav-item.active {
-            background-color: #e0e0e0;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            margin: 5px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>Home - CATS Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="pixel-art">
-                ▄▄▄<br>
-                █▀█<br>
-                █▄█
-            </div>
-            <div class="balance">1027 $PixelDogs</div>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-orange-400 to-orange-600 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-M51mAs3Uc3eAW2jmOKsox0Ie.png?st=2024-10-01T07%3A58%3A08Z&se=2024-10-01T09%3A58%3A08Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-10-01T01%3A59%3A36Z&ske=2024-10-02T01%3A59%3A36Z&sks=b&skv=2024-08-04&sig=AtG8o6n61X9yfTurDGjVZ4jJmhkr9RM3C8w6Xz3InFc%3D" alt="Cat icon" class="w-6 h-6 mr-2" width="24" height="24"/>
+            <span>Watch our last update!</span>
         </div>
-        
-        <div class="page-container">
-            <div id="home-page" class="page active">
-                <div class="stats">
-                    <div class="stat">
-                        <div>Rewards</div>
-                        <div>+560 🦴</div>
+        <button class="bg-white text-orange-600 px-4 py-2 rounded-full">Meeoow!</button>
+    </div>
+    <!-- Main Content -->
+    <div class="p-4">
+        <div class="bg-blue-100 text-blue-600 text-center py-2 rounded mb-4">
+            Access exclusive streams with <a href="#" class="text-blue-800 font-bold">OG Pass</a> <i class="fas fa-cat"></i>
+        </div>
+        <div class="text-center mb-6">
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-XOJsZk1yldBDymVKqMB1SPWd.png?st=2024-10-01T07%3A58%3A09Z&se=2024-10-01T09%3A58%3A09Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-10-01T01%3A36%3A18Z&ske=2024-10-02T01%3A36%3A18Z&sks=b&skv=2024-08-04&sig=re6%2BKrEzaC5ILUXI2C/LMLbq5ujsioLvu%2BT7xo/EgG8%3D" alt="Cat logo" class="mx-auto mb-2" width="64" height="64"/>
+            <div class="text-4xl font-bold">16,861 CATS</div>
+            <div class="flex justify-center space-x-8 mt-2">
+                <div class="text-center">
+                    <div class="text-gray-500">Rewards</div>
+                    <div class="font-bold">+1.4k <i class="fas fa-cat"></i></div>
+                </div>
+                <div class="text-center">
+                    <div class="text-gray-500">Tasks</div>
+                    <div class="font-bold">+9.3k <i class="fas fa-cat"></i></div>
+                </div>
+                <div class="text-center">
+                    <div class="text-gray-500">Invites</div>
+                    <div class="font-bold">+263 <i class="fas fa-cat"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Daily Tasks -->
+        <div class="mb-6">
+            <div class="text-lg font-bold mb-2">Daily Tasks</div>
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="font-bold">Make TON Great Again</div>
+                        <div class="text-gray-500">+2000 CATS</div>
+                        <div class="text-gray-500 text-sm">1 completed</div>
                     </div>
-                    <div class="stat">
-                        <div>Tasks</div>
-                        <div>+345 🦴</div>
-                    </div>
-                    <div class="stat">
-                        <div>Invites</div>
-                        <div>+112 🦴</div>
+                    <div class="bg-blue-500 text-white p-2 rounded-full">
+                        <i class="fab fa-telegram-plane"></i>
                     </div>
                 </div>
-                <div class="mining" onclick="handleMining()">Mining PixelDogs.. 3hr 21mins</div>
-            </div>
-            
-            <div id="friends-page" class="page">
-                <h2>Friends</h2>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="padding: 10px 0;">CryptoBarker - Level 12</li>
-                    <li style="padding: 10px 0;">PixelPup - Level 8</li>
-                    <li style="padding: 10px 0;">BlockchainBowWow - Level 15</li>
-                </ul>
-            </div>
-            
-            <div id="wallet-page" class="page">
-                <h2>Wallet</h2>
-                <p style="margin: 20px 0;">Balance: 1027 $PixelDogs</p>
-                <button onclick="alert('Transaction sent!')">Send $PixelDogs</button>
-                <button onclick="alert('Receiving address copied!')">Receive $PixelDogs</button>
             </div>
         </div>
-        
-        <div class="navigation">
-            <div class="nav-item active" onclick="navigateTo('home')">🏠<br>Home</div>
-            <div class="nav-item" onclick="navigateTo('friends')">👥<br>Friends</div>
-            <div class="nav-item" onclick="navigateTo('wallet')">💼<br>Wallet</div>
+        <!-- Tasks -->
+        <div class="mb-6">
+            <div class="text-lg font-bold mb-2">Tasks</div>
+            <div class="bg-white p-4 rounded shadow mb-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="font-bold">Complete the quest (high load) <i class="fas fa-hourglass-half"></i></div>
+                        <div class="text-gray-500">+1200 CATS</div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">Check</button>
+                        <div class="bg-blue-500 text-white p-2 rounded-full">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="font-bold">Boost CATS channel</div>
+                        <div class="text-gray-500">+50 CATS</div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">Check</button>
+                        <div class="bg-blue-500 text-white p-2 rounded-full">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Show more tasks -->
+        <div class="text-center text-blue-600">
+            <button class="flex items-center space-x-1">
+                <span>Show more tasks</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
         </div>
     </div>
-
-    <script>
-        function handleMining() {
-            alert("Mining in progress! You'll earn PixelDogs over time.");
-        }
-
-        function navigateTo(page) {
-            const currentPage = document.querySelector('.page.active');
-            const newPage = document.getElementById(page + '-page');
-            
-            if (currentPage.id === newPage.id) return;
-
-            const direction = Array.from(document.querySelectorAll('.page')).indexOf(newPage) > 
-                              Array.from(document.querySelectorAll('.page')).indexOf(currentPage) ? 1 : -1;
-
-            currentPage.style.transform = `translateX(0)`;
-            newPage.style.transform = `translateX(${100 * direction}%)`;
-
-            newPage.offsetWidth; // Trigger reflow
-
-            newPage.classList.add('active');
-
-            currentPage.style.transform = `translateX(${-100 * direction}%)`;
-            newPage.style.transform = `translateX(0)`;
-
-            currentPage.addEventListener('transitionend', function handler() {
-                currentPage.classList.remove('active');
-                currentPage.removeEventListener('transitionend', handler);
-            });
-            
-            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+    <!-- Footer -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow p-4 flex justify-around">
+        <div class="text-center">
+            <a href="index.html">
+                <i class="fas fa-home text-blue-500"></i>
+                <div class="text-xs text-blue-500">Home</div>
+            </a>
+        </div>
+        <div class="text-center">
+            <a href="leaderboard.html">
+                <i class="fas fa-trophy text-gray-500"></i>
+                <div class="text-xs text-gray-500">Leaderboard</div>
+            </a>
+        </div>
+        <div class="text-center">
+            <a href="friends.html">
+                <i class="fas fa-user-friends text-gray-500"></i>
+                <div class="text-xs text-gray-500">Friends</div>
+            </a>
+        </div>
+        <div class="text-center">
+            <a href="avatar.html">
+                <i class="fas fa-cat text-gray-500"></i>
+                <div class="text-xs text-gray-500">Avatar</div>
+            </a>
+        </div>
+        <div class="text-center">
+            <a href="airdrop.html">
+                <i class="fas fa-gift text-gray-500"></i>
+                <div class="text-xs text-gray-500">Airdrop</div>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

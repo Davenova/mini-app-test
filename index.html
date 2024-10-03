@@ -5,20 +5,24 @@
     <title>Home - CATS Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/
-    <style>
-      /* Add the CSS code to prevent links from being shown on long press */
-      a {
-        pointer-events: none;
-        cursor: default;
-      }
-    </style>
+    <script>
+        // Get all links on the page
+        var links = document.querySelectorAll('a');
+
+        // Add an event listener to each link to prevent the default behavior
+        links.forEach(function(link) {
+            link.addEventListener('contextmenu', function(event) {
+                event.preventDefault();
+            });
+        });
+    </script>
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
     <div class="bg-gradient-to-r from-orange-400 to-orange-600 text-white p-4 flex justify-between items-center">
         <div class="flex items-center">
             <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-pfAJ67JLlmeX7SiKDbzaBiju.png?st=2024-10-01T16%3A51%3A13Z&se=2024-10-01T18%3A51%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-10-01T01%3A24%3A36Z&ske=2024-10-02T01%3A24%3A36Z&sks=b&skv=2024-08-04&sig=Cwiu5O2uiR2exkMXILlJSRExKbavIdSz5fN3tgeEs2Q%3D" alt="Cat icon" class="mr-2" width="24" height="24">
-            <span>Check Our Latest Announcement</span>
+            <span>Check Our Latest</span>
         </div>
         <button class="bg-white text-orange-600 px-4 py-2 rounded-full">Meeoow!</button>
     </div>

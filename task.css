@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .header p {
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+  }
+  
+  .task-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-card h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  
+  .task-card p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0 0 10px;
+  }
+  
+  .task-card .progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .task-card .progress span {
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  .task-card .avatars {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-card .avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .task-card .avatars .add-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    color: #888888;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .task-item:last-child {
+    border-bottom: none;
+  }
+  
+  .task-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .task-item .task-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-item .task-info span {
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .task-item .task-info .reward {
+    font-size: 14px;
+    color: green;
+    margin-left: 5px;
+  }
+  
+  .task-item .task-status {
+    font-size: 14px;
+    color: green;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+  .footer img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .fixed {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fixed a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fixed i {
+  font-size: 16px; /* Set to a smaller, consistent size */
+  margin-bottom: 5px;
+  color: gray; /* Ensure icon color is gray */
+}
+
+.fixed div {
+    font-size: 14px;
+    color: gray;
+}
+
+.fixed a {
+  color: gray; /* Ensure links are gray */
+}
+
+.fixed a:visited {
+  color: gray; /* Same color for visited links */
+}
+
+.fixed a:hover {
+  color: #000; /* Darken slightly on hover, optional */
+}
+
+.fixed a:active {
+  color: #000; /* Ensure active state is consistent */
+}
+
+.fixed a i {
+  color: gray; /* Same color for icons inside links */
+}
+
+.fixed a div {
+  color: gray; /* Same for text */
+}
+
+.fixed a:hover i {
+  color: black; /* Change icon color on hover */
+}
+
+.fixed a:hover div {
+  color: black; /* Change text color on hover */
+}
+
+
+  /* Base button style */
+.custom-button {
+  background-color: #4CAF50; /* Green background */
+  color: white;              /* White text */
+  font-weight: bold;
+  padding: 8px 14px; /* Smaller padding for a smaller button */
+  border-radius: 10px; /* Slightly rounded corners */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px; /* Smaller font size */
+}
+
+/* Hover state for the button */
+.custom-button:hover {
+  background-color: #49924c; /* Darker green on hover */
+}
+
+/* Active state for button (when pressed) */
+.custom-button:active {
+  background-color: #49924c; /* Even darker green when pressed */
+  transform: scale(0.95); /* Slight scale down */
+}
+
+/* Orange button for "Claim" state */
+.custom-button.claim {
+  background-color: #dd9103; /* Orange */
+}
+
+/* Hover state for "Claim" state */
+.custom-button.claim:hover {
+  background-color: #dd9103; /* Darker Orange */
+}
+
+/* Blue button for "Claimed" state */
+.custom-button.claimed {
+  background-color: #6e43a7ea; /* Blue */
+  pointer-events: none; /* Disable interactions */
+  opacity: 0.6; /* Dim the button */
+}
+
+/* Disable hover effect when button is claimed */
+.custom-button.claimed:hover {
+  background-color: #6e43a7ea; /* Maintain the same blue color on hover */
+}

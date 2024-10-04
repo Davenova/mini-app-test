@@ -10,6 +10,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: bold;
+  z-index: 1000;
 }
 
 .loading-animation {
@@ -19,6 +20,7 @@
   border: 5px solid #ccc;
   border-top-color: #333;
   animation: spin 1s linear infinite;
+  margin-bottom: 20px;
 }
 
 @keyframes spin {
@@ -28,4 +30,10 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loading-screen p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }

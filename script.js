@@ -6,8 +6,10 @@ if (claimed === 'true') {
   button.textContent = 'Claimed';
   button.classList.remove('bg-blue-500', 'hover:bg-blue-700');
   button.classList.add('bg-white', 'text-green-500');
+  button.disabled = true; // Disable the button when it's claimed
 } else {
   button.textContent = 'Check';
+  button.disabled = false; // Enable the button when it's not claimed
 }
 
 button.addEventListener('click', () => {
@@ -17,11 +19,13 @@ button.addEventListener('click', () => {
     button.textContent = 'Claim';
     button.classList.remove('bg-blue-500', 'hover:bg-blue-700');
     button.classList.add('bg-orange-500', 'hover:bg-orange-700');
+    button.disabled = false; // Enable the button when it's in the "Claim" state
   } else if (button.textContent === 'Claim') {
     localStorage.setItem('claimed_button', 'true');
     button.textContent = 'Claimed';
     button.classList.remove('bg-orange-500', 'hover:bg-orange-700');
     button.classList.add('bg-white', 'text-green-500');
+    button.disabled = true; // Disable the button when it's claimed
   } else {
     localStorage.removeItem('claimed_button');
     button.textContent = 'Check';

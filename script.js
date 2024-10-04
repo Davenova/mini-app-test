@@ -1,4 +1,7 @@
 document.getElementById('myButton').addEventListener('click', function() {
-  this.textContent = 'Claim';
-  this.innerHTML = '<a href="https://www.youtube.com/" target="_blank">Claim</a>';
+    // Open YouTube link
+    window.open('https://www.youtube.com/', '_blank');
+
+    // Change the button text to "Claim"
+    this.textContent = 'Claim';
 });

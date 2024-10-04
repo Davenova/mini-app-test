@@ -1,0 +1,31 @@
+/* Add your loading screen styles here */
+body {
+  background-image: url('background-image.jpg'); /* Add your background image URL here */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* Add a z-index to ensure the loading container is on top of the background image */
+}
+.loading-spinner {
+  border: 5px solid #ccc;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,8 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="Longpress.css">
+    <link rel="stylesheet" href="loading.css">
 </head>
 <body class="bg-gray-100 font-sans">
+    <!-- Loading screen container -->
+    <div id="loading-container">
+        <!-- Include the loading screen HTML -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-animation"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <!-- Header -->
     <div class="bg-gradient-to-r from-blue-100 to-blue-600 text-white p-4 flex justify-between items-center">
         <div class="flex items-center">
@@ -42,7 +53,7 @@
         </div>
         <!-- Daily Tasks -->
         <div class="mb-6">
-            <div class="text-lg font-bold mb-2">Daily Tasks</div>
+            <div class="text-lg font-bold mb-2 ">Daily Tasks</div>
             <div class="bg-white p-4 rounded shadow">
                 <div class="flex justify-between items-center">
                     <div>
@@ -116,5 +127,6 @@
         </a>
     </div>
     <script src="script.js"></script>
+    <script src="loading.js"></script>
 </body>
 </html>

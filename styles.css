@@ -57,3 +57,45 @@
     transform: rotate(-90deg);
   }
 }
+/* Rounded boxes */
+.rounded-box {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Smoother typography */
+.smooth-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Button styles */
+.button {
+  @apply rounded-box;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+/* Input styles */
+.input {
+  @apply rounded-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Container styles */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  @apply rounded-box;
+  background-color: #f9f9f9;
+}

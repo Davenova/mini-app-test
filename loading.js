@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log('Loading script is running');
   var counter = 0;
 
   // Start the changing images
@@ -16,6 +17,7 @@ $(document).ready(function() {
 
   // Redirect to index.html after 5 seconds
   setTimeout(function() {
+    console.log('Redirecting to index.html');
     window.location.href = 'index.html';
   }, 5000);
 });

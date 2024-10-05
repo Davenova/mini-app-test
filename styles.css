@@ -83,19 +83,3 @@
 .button:hover {
   background-color: #3e8e41;
 }
-
-/* Input styles */
-.input {
-  @apply rounded-box;
-  padding: 12px;
-  border: 1px solid #ccc;
-}
-
-/* Container styles */
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  @apply rounded-box;
-  background-color: #f9f9f9;
-}

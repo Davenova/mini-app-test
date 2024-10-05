@@ -5,7 +5,7 @@ $(document).ready(function() {
   setTimeout(function() {
     $('#loading-container').hide();
     $('#home-container').show();
-  }, 10000);
+  }, 5000);
 
   // Start the changing images
   setInterval(function() {
@@ -50,6 +50,6 @@ function loading(){
         loading();
       }
       num++;
-    },i*120);
+    },i*50);
   };
 }

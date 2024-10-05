@@ -43,7 +43,7 @@ function loading(){
       $('.loader span').html(num+'%');
 
       if(num == 100) {
-        loading();
+        // Remove the recursive call to loading()
       }
       num++;
     },i*50);

@@ -1,6 +1,12 @@
 $(document).ready(function() {
   var counter = 0;
 
+  // Hide the loading animation and show the home page after 10 seconds
+  setTimeout(function() {
+    $('#loading-container').hide();
+    $('#home-container').show();
+  }, 10000);
+
   // Start the changing images
   setInterval(function() {
     if(counter == 9) { 
@@ -13,6 +19,8 @@ $(document).ready(function() {
 
   // Set the percentage off
   loading();
+
+  // Your existing JavaScript code here...
 });
 
 function changeImage(counter) {
@@ -44,5 +52,4 @@ function loading(){
       num++;
     },i*120);
   };
-
 }

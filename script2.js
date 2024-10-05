@@ -33,7 +33,6 @@ function changeImage(counter) {
     '<i class="fa fa-rocket"></i>',
     '<i class="fa fa-ticket"></i>',
     '<i class="fa fa-pie-chart"></i>',
-    '<i class="fa fa-codepen"></i>'
   ];
 
   $(".loader .image").html(""+ images[counter] +"");

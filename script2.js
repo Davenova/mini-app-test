@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var counter = 0;
+  var counter = 1;
 
   // Hide the loading animation and show the home page after 10 seconds
   setTimeout(function() {

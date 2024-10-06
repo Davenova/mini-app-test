@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var counter = 1;
+  var counter = 0;
 
   // Hide the loading animation and show the home page after 10 seconds
   setTimeout(function() {
@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   // Start the changing images
   setInterval(function() {
-    if(counter == 9) { 
+    if(counter == 3) { 
       counter = 0; 
     }
 
@@ -23,13 +23,24 @@ $(document).ready(function() {
   // Your existing JavaScript code here...
 });
 
-function changeImage(counter) {
-  var images = [
-    '<img src"IMG_0113.jpeg"></i>',
-   
-  ];
+var images = [
+  'fa fa-gamepad',
+  'IMG_0113.jpeg',
+  'fa fa-fighter-jet'
+];
 
-  $(".loader .image").html(""+ images[counter] +"");
+var imageSources = [
+  '',
+  'IMG_0113.jpeg',
+  ''
+];
+
+function changeImage(counter) {
+  if (imageSources[counter] !== '') {
+    $(".loader .image").html('<img src="' + imageSources[counter] + '" alt="Cat icon">');
+  } else {
+    $(".loader .image").html('<i class="' + images[counter] + '"></i>');
+  }
 }
 
 function loading(){
@@ -40,7 +51,8 @@ function loading(){
       $('.loader span').html(num+'%');
 
       if(num == 100) {
-        loading();
+        // Remove the recursive call to prevent infinite loop
+        // loading();
       }
       num++;
     },i*50);

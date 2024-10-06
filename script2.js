@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 var images = [
   'fa fa-gamepad',
-  'nevada.png'
+  'cool.png'
 ];
 
 function changeImage(counter) {

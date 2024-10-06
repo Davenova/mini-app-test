@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 var images = [
   'fa fa-gamepad',
-  'fa fa-fighter-jet'
+  'wallet.png'
 ];
 
 function changeImage(counter) {

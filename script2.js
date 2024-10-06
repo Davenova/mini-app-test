@@ -25,7 +25,6 @@ $(document).ready(function() {
 
 var images = [
   'fa fa-gamepad',
-  'IMG_0113.jpeg',
   'fa fa-fighter-jet'
 ];
 

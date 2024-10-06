@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 var images = [
   'fa fa-gamepad',
-  'initials.png'
+  'necada.png'
 ];
 
 function changeImage(counter) {

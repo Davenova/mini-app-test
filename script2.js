@@ -29,17 +29,11 @@ var images = [
   'fa fa-fighter-jet'
 ];
 
-var imageSources = [
-  '',
-  'IMG_0113.jpeg',
-  ''
-];
-
 function changeImage(counter) {
-  if (imageSources[counter] !== '') {
-    $(".loader .image").html('<img src="' + imageSources[counter] + '" alt="Cat icon">');
-  } else {
+  if (images[counter].startsWith('fa')) {
     $(".loader .image").html('<i class="' + images[counter] + '"></i>');
+  } else {
+    $(".loader .image").html('<img src="' + images[counter] + '" alt="Cat icon">');
   }
 }
 

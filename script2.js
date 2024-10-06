@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 function changeImage(counter) {
   var images = [
-    '<img src="IMG_0113.jpeg"></i>',
+    '<i class="fa fa-gamepad"></i>',
     '<i class="fa fa-fighter-jet"></i>',
    
   ];
